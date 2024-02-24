@@ -24,7 +24,7 @@ test_mul_digit_string: test_mul_digit_string.c
 	$(CC) -c $(CCOPTS) -o $@ $^
 
 stringnum.a: $(OBJECTS)
-	$(AR) $(AROPTS) $@ mul_int_string.o mul_digit_string.o add_digit_strings.o
+	$(AR) $(AROPTS) $@ $^
 libstringnum.so: $(OBJECTS)
 	$(CC) $(CCOPTS) -shared -o $@ $^
 
