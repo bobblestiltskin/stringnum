@@ -11,10 +11,7 @@ run_test: test_mul_digit_string test_add_digit_strings test_mul_int_string
 
 test: test_mul_int_string test_add_digit_strings test_mul_digit_string $(SLIB)
 
-#test_mul_int_string: test_mul_int_string.c mul_int_string.c mul_digit_string.c add_digit_strings.c
-#test_add_digit_strings: test_add_digit_strings.c add_digit_strings.c 
-##test_mul_digit_string: test_mul_digit_string.c mul_digit_string.c
-test_mul_int_string: test_mul_int_string.c 
+test_mul_int_string: test_mul_int_string.c
 test_add_digit_strings: test_add_digit_strings.c
 test_mul_digit_string: test_mul_digit_string.c
 
