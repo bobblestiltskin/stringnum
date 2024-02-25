@@ -2,7 +2,8 @@
 arbitrary length integers - which are stored in strings - implemented in c
 
 3 functions are provided, all of which pass the input string as const char *in_string, 
-and require a char **out_string_ptr as a pointer to externally allocated output storage.
+and require a char **out_string_ptr as a pointer to externally allocated output storage
+and each routine returns a status code - 0 for success.
 
 - int mul_digit_string(const int digit, const char *in_string, char **out_string_ptr)
   /multiplies the input string by a single digit
