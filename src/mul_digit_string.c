@@ -56,3 +56,17 @@ printf("leaving mul_digit_string output is %s\n", *out_string_ptr);
 
   return 0;
 }
+
+const char *string_mul_digit_string(const int digit, const char *in_string)
+{
+  /* multiplies the in_string by a single digit it returns a pointer to the locally added array */
+
+  int out_len = strlen(in_string);
+  char *tmp = calloc(out_len + 1, sizeof(char));
+
+  int status = mul_digit_string(digit, in_string, &tmp);
+  printf("status is %d and tmp is %s\n", status, tmp);
+
+  return tmp;
+}
+

@@ -4,6 +4,7 @@
 
 int mul_int_string(const int, const char *, char **);
 int call_mul_int_string(const int, const int *, const char **, const char **);
+const char *string_mul_int_string(const int, const char *);
 
 int main(int argc, char **argv)
 {
@@ -25,6 +26,11 @@ int main(int argc, char **argv)
     status = call_mul_int_string(1, scalars, input, output);
   if (!status)
     status = call_mul_int_string(2, scalars, input, output);
+
+  int a = 97;
+  const char *b = "1234";
+  const char *opstring = string_mul_int_string(a, b);
+  printf("a is %d b is %s and opstring is %s\n", a, b, opstring);
 
   return(status);
 }

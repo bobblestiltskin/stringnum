@@ -1,4 +1,5 @@
 AROPTS  := -rv
+#CCOPTS  := -Wall -Werror -g -DDEBUG
 CCOPTS  := -Wall -Werror -g
 CLIBS   := -lm
 OBJECTS := mul_int_string.o mul_digit_string.o add_digit_strings.o
@@ -26,7 +27,7 @@ stringnum.a: $(OBJECTS)
 libstringnum.so.$(VERSION): $(OBJECTS)
 	$(CC) $(CCOPTS) -shared -o $@ $^
 libstringnum.so:  libstringnum.so.$(VERSION)
-	ln -s $^ $@
+	ln -fs $^ $@
 
 clean:
 	/bin/rm -f *.o test_add_digit_strings test_mul_digit_string test_mul_int_string stringnum.a libstringnum.so.$(VERSION) libstringnum.so

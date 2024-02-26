@@ -39,9 +39,9 @@ int add_strings_short_to_long(const char *short_string, const char *long_string,
   /* generate out_string by adding in_1_string to in_2_string */
 
 #ifdef DEBUG
-printf("ENTERING add_digit_strings IN 1 STRING is %s IN 2 STRING is %s and OUT STRING is %s\n", in_1_string, in_2_string, *out_string_ptr);
-printf("PTS add_digit_strings IN 1 STRING is %p IN 2 STRING is %p OUT STRING is %p\n", in_1_string, in_2_string, *out_string_ptr);
-printf("LEN add_digit_strings IN 1 STRING is %d IN 2 STRING is %d OUT STRING is %d\n", (int) strlen(in_1_string), (int) strlen(in_2_string), (int) strlen(*out_string_ptr));
+printf("ENTERING add_digit_strings IN 1 STRING is %s IN 2 STRING is %s and OUT STRING is %s\n", short_string, long_string, *out_string_ptr);
+printf("PTS add_digit_strings IN 1 STRING is %p IN 2 STRING is %p OUT STRING is %p\n", short_string, long_string, *out_string_ptr);
+printf("LEN add_digit_strings IN 1 STRING is %d IN 2 STRING is %d OUT STRING is %d\n", (int) strlen(short_string), (int) strlen(long_string), (int) strlen(*out_string_ptr));
 #endif
 
   int min_len = strlen(short_string);
@@ -96,8 +96,6 @@ printf("LEN add_digit_strings IN 1 STRING is %d IN 2 STRING is %d OUT STRING is 
   }
 
 #ifdef DEBUG
-printf("LEAVING add_digit_strings IN 1 STRING is %s\n", in_1_string);
-printf("LEAVING add_digit_strings IN 2 STRING is %s\n", in_2_string);
 printf("LEAVING add_digit_strings OUT STRING is %s\n", *out_string_ptr);
 #endif
 
@@ -115,5 +113,18 @@ int handle_carry(int carry, char **out_string_ptr)
   strncat(*out_string_ptr, tmp, strlen(tmp));
   free(tmp);
   return 0;
+}
+
+const char *string_add_digit_strings(const char *in_1_string, const char *in_2_string)
+{
+  /* multiplies the in_string by a single digit it returns a pointer to the locally added array */
+
+  int out_len = (strlen(in_1_string) > strlen(in_2_string)) ? strlen(in_1_string) : strlen(in_2_string);
+  char *tmp = calloc(out_len + 1, sizeof(char));
+
+  int status = add_digit_strings(in_1_string, in_2_string, &tmp);
+  printf("status is %d, tmp is %s\n", status, tmp);
+
+  return tmp;
 }
 

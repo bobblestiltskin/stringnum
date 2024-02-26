@@ -5,6 +5,7 @@
 
 int add_digit_strings(const char *, const char *, char **);
 int call_add_digit_strings(const int, const char **, const char **, const char **);
+const char *string_add_digit_strings(const char *, const char *);
 
 int main(int argc, char **argv)
 {
@@ -24,6 +25,11 @@ int main(int argc, char **argv)
   int status = call_add_digit_strings(0, input1, input2, output);
   if (!status)
     status = call_add_digit_strings(1, input1, input2, output);
+
+  const char *a = "9876";
+  const char *b = "1234";
+  const char *opstring = string_add_digit_strings(a, b);
+  printf("a is %s, b is %s, and opstring is %s\n", a, b, opstring);
 
   return(status);
 }
@@ -50,4 +56,3 @@ int call_add_digit_strings(const int index, const char **input1, const char **in
   free(a);
   return status;
 }
-

@@ -5,6 +5,7 @@
 
 void call_mul_digit_string(const int, const int *, const char **, const char **);
 int mul_digit_string(const int, const char *, char **);
+const char *string_mul_digit_string(const int, const char *);
 
 int main()
 {
@@ -26,6 +27,11 @@ int main()
   int i;
   for (i = 0; i < 4; ++i)
     call_mul_digit_string(i, scalars, numeric_input, numeric_output);
+
+  int a = 9;
+  const char *b = "1234";
+  const char *opstring = string_mul_digit_string(a, b);
+  printf("a is %d b is %s and opstring is %s\n", a, b, opstring);
 
   return(0);
 }
