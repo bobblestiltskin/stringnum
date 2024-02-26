@@ -31,6 +31,7 @@ int main(int argc, char **argv)
   const char *b = "1234";
   const char *opstring = string_mul_int_string(a, b);
   printf("a is %d b is %s and opstring is %s\n", a, b, opstring);
+  free((void *)opstring);
 
   return(status);
 }

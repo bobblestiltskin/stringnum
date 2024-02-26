@@ -32,6 +32,7 @@ int main()
   const char *b = "1234";
   const char *opstring = string_mul_digit_string(a, b);
   printf("a is %d b is %s and opstring is %s\n", a, b, opstring);
+  free((void *)opstring);
 
   return(0);
 }
