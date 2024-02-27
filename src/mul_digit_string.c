@@ -59,8 +59,6 @@ const char *string_mul_digit_string(const int digit, const char *in_string)
   int out_len = strlen(in_string);
   char *tmp = calloc(out_len + 1, sizeof(char));
 
-  int status = mul_digit_string(digit, in_string, &tmp);
-  printf("status is %d and tmp is %s\n", status, tmp);
-
+  mul_digit_string(digit, in_string, &tmp); // discard returned status value
   return tmp;
 }

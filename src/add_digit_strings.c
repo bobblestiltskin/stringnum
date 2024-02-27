@@ -117,9 +117,7 @@ const char *string_add_digit_strings(const char *in_1_string, const char *in_2_s
   int out_len = (strlen(in_1_string) > strlen(in_2_string)) ? strlen(in_1_string) : strlen(in_2_string);
   char *tmp = calloc(out_len + 1, sizeof(char));
 
-  int status = add_digit_strings(in_1_string, in_2_string, &tmp);
-  printf("status is %d, tmp is %s\n", status, tmp);
-
+  add_digit_strings(in_1_string, in_2_string, &tmp); // discard returned status
   return tmp;
 }
 

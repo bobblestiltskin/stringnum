@@ -57,9 +57,7 @@ const char *string_mul_int_string(const int alpha, const char *in_string)
   int out_len = strlen(in_string);
   char *tmp = calloc(out_len + 1, sizeof(char));
 
-  int status = mul_int_string(alpha, in_string, &tmp);
-  printf("status is %d and tmp is %s\n", status, tmp);
-
+  mul_int_string(alpha, in_string, &tmp); // discard unused status return value
   return tmp;
 }
 
