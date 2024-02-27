@@ -1,12 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <assert.h>
-
-#define BASE 10
-
-int mul_digit_string(const int, const char *, char **);
-int add_digit_strings(const char *, const char *, char **);
+#include "stringnum.h"
 
 int mul_int_string(int alpha, const char *in_string, char **out_string_ptr)
 {

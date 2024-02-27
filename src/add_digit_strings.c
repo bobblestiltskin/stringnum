@@ -1,9 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <assert.h>
-
-#define BASE 10
+#include "stringnum.h"
 
 int add_strings_short_to_long(const char *, const char *, char **);
 int handle_carry(int, char **);

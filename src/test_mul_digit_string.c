@@ -1,11 +1,6 @@
-#include <stdio.h>
-#include <stdint.h>
-#include <stdlib.h>
-#include <string.h>
+#include "stringnum.h"
 
 void call_mul_digit_string(const int, const int *, const char **, const char **);
-int mul_digit_string(const int, const char *, char **);
-const char *string_mul_digit_string(const int, const char *);
 
 int main()
 {

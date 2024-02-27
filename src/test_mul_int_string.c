@@ -1,10 +1,6 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include "stringnum.h"
 
-int mul_int_string(const int, const char *, char **);
 int call_mul_int_string(const int, const int *, const char **, const char **);
-const char *string_mul_int_string(const int, const char *);
 
 int main(int argc, char **argv)
 {

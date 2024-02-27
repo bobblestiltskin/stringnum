@@ -1,11 +1,6 @@
-#include <stdio.h>
-#include <stdint.h>
-#include <stdlib.h>
-#include <string.h>
+#include "stringnum.h"
 
-int add_digit_strings(const char *, const char *, char **);
 int call_add_digit_strings(const int, const char **, const char **, const char **);
-const char *string_add_digit_strings(const char *, const char *);
 
 int main(int argc, char **argv)
 {

@@ -1,9 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <assert.h>
-
-#define BASE 10
+#include "stringnum.h"
 
 int mul_digit_string(const int digit, const char *in_string, char **out_string_ptr)
 {
@@ -69,4 +64,3 @@ const char *string_mul_digit_string(const int digit, const char *in_string)
 
   return tmp;
 }
-
