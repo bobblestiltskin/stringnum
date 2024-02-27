@@ -1,0 +1,17 @@
+/home/robert/src/stringnum/src/lua (main) $ time lua lua_factorial.lua                                                                                                                                                                                                             (base) 
+648
+
+________________________________________________________
+Executed in   17.52 millis    fish           external
+   usr time   14.43 millis  222.00 micros   14.20 millis
+   sys time    0.30 millis  298.00 micros    0.00 millis
+
+/home/robert/src/stringnum/src/lua (main) $ time lua clib_factorial.lua                                                                                                                                                                                                            (base) 
+648
+
+________________________________________________________
+Executed in    4.03 millis    fish           external
+   usr time    3.71 millis  351.00 micros    3.36 millis
+   sys time    0.47 millis  472.00 micros    0.00 millis
+
+

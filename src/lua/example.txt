@@ -1,0 +1,17 @@
+/home/robert/src/stringnum/src/lua (main) $ lua                                                                                                                                                                                                                                    (base) 
+Lua 5.4.4  Copyright (C) 1994-2022 Lua.org, PUC-Rio
+> mylib = require 'mylib'
+> print(mylib.mul_digit_string(3,"123"))
+369
+> print(mylib.add_digit_strings("321","123"))
+444
+> print(mylib.mul_digit_string(37,"123"))
+lua: mul_digit_string.c:12: mul_digit_string: Assertion `digit <= 9' failed.
+fish: Job 1, 'lua' terminated by signal SIGABRT (Abort)
+/home/robert/src/stringnum/src/lua (main) $ lua                                                                                                                                                                                                                                    (base) 
+Lua 5.4.4  Copyright (C) 1994-2022 Lua.org, PUC-Rio
+> mylib = require 'mylib'
+> print(mylib.mul_int_string(37,"123"))
+4551
+> 
+
