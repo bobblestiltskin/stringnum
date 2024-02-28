@@ -109,15 +109,3 @@ int handle_carry(int carry, char **out_string_ptr)
   free(tmp);
   return 0;
 }
-
-const char *string_add_digit_strings(const char *in_1_string, const char *in_2_string)
-{
-  /* multiplies the in_string by a single digit it returns a pointer to the locally added array */
-
-  int out_len = (strlen(in_1_string) > strlen(in_2_string)) ? strlen(in_1_string) : strlen(in_2_string);
-  char *tmp = calloc(out_len + 1, sizeof(char));
-
-  add_digit_strings(in_1_string, in_2_string, &tmp); // discard returned status
-  return tmp;
-}
-

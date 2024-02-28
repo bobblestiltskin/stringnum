@@ -49,15 +49,3 @@ printf("LEAVING mul_int_string with alpha of %d and in_string of %s and outstrin
   
   return 0;
 }
-
-const char *string_mul_int_string(const int alpha, const char *in_string)
-{
-  /* multiplies the in_string by an integer it returns a pointer to the locally added array */
-
-  int out_len = strlen(in_string);
-  char *tmp = calloc(out_len + 1, sizeof(char));
-
-  mul_int_string(alpha, in_string, &tmp); // discard unused status return value
-  return tmp;
-}
-

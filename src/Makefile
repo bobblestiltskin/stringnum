@@ -2,7 +2,7 @@ AROPTS  := -rv
 #CCOPTS  := -Wall -Werror -g -DDEBUG
 CCOPTS  := -Wall -Werror -g
 CLIBS   := -lm
-OBJECTS := mul_int_string.o mul_digit_string.o add_digit_strings.o
+OBJECTS := mul_int_string.o mul_digit_string.o add_digit_strings.o string_wrap.o
 SLIB    := ./stringnum.a
 VERSION := 0.0.1
 
