@@ -23,4 +23,4 @@ Each function now has a string_ variant which returns a const char * of a local 
 - const char *string_mul_int_string(int alpha, const char *in_string)
    -- returns a string comprising the product of alpha and the in_string
 
-  All of these veriants cause memory to be allocated so the local variable set from any of the functions should be free'd after use. (see the test programs for exemplars).
+  All of these variants cause memory to be allocated so the local variable set from any of the functions should be free'd after use. (see the test programs for exemplars).
