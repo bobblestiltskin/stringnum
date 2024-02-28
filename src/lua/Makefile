@@ -1,7 +1,11 @@
 CCOPTS := -I/usr/include/lua5.4
+STRINGNUM := ../stringnum.a
 CLIBS := -shared -fPIC -llua5.4 ../stringnum.a
 
-all: mylib.so
+all: $(STRINGNUM) mylib.so
+
+$(STRINGNUM):
+	make -C .. stringnum.a
 
 mylib.so: main.c
 	$(CC) $(CCOPTS) -o $@ $^ $(CLIBS)
