@@ -1,6 +1,6 @@
 #include "stringnum.h"
 
-int mul_int_string(int alpha, const char *in_string, char **out_string_ptr)
+int mul_int_string(const int alpha, const char *in_string, char **out_string_ptr)
 {
 #ifdef DEBUG
 printf("ENTERING mul_int_string with alpha of %d and in_string of %s and outstring of %s\n", alpha, in_string, *out_string_ptr);
